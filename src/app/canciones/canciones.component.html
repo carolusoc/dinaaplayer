@@ -1,0 +1,10 @@
+<h2>Mis Canciones</h2>
+<ul class="canciones">
+  <li *ngFor="let cancion of canciones"
+    [class.selected]="cancion === selectedCancion"
+    (click)="onSelect(cancion)">
+    <span class="badge">{{cancion.id}}</span> {{cancion.name}}
+  </li>
+</ul>
+
+<app-cancion-detalle [cancion]="selectedCancion"></app-cancion-detalle>
