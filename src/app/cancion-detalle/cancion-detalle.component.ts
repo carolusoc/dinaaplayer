@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Cancion } from '../cancion';
+import { FilterPipe } from '../filter.pipe';
 
 @Component({
   selector: 'app-cancion-detalle',

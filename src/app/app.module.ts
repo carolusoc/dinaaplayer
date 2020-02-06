@@ -6,12 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CancionesComponent } from './canciones/canciones.component';
 import { CancionDetalleComponent } from './cancion-detalle/cancion-detalle.component';
+import { FilterPipe } from './filter.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CancionesComponent,
-    CancionDetalleComponent
+    CancionDetalleComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,39 @@
-<h2>Mis Canciones</h2>
-<ul class="canciones">
-  <li *ngFor="let cancion of canciones"
-    [class.selected]="cancion === selectedCancion"
-    (click)="onSelect(cancion)">
-    <span class="badge">{{cancion.id}}</span> {{cancion.name}}
-  </li>
-</ul>
 
-<app-cancion-detalle [cancion]="selectedCancion"></app-cancion-detalle>
+
+
+  <div class="filtro col-sm-2">
+
+    <h2>Buscar:</h2>
+    
+    <input [(ngModel)]="searchText" placeholder="Cancion, álbum, artista, genero...">
+  
+  </div>
+
+ 
+
+<div class="canciones col-sm-10">
+  <div class="row">
+    <div class="text-center top">
+      <h1>DinAAplayer</h1>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12" >
+      <app-cancion-detalle class="col-sm-4 col-sm-offset-4" [cancion]="selectedCancion"></app-cancion-detalle>
+
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-sm-3 gridSong nopadding" *ngFor="let cancion of canciones | filter: {name: searchText, artista: searchText, album: searchText, genero: searchText}"
+         [class.selected]="cancion === selectedCancion"
+         (click)="onSelect(cancion)">
+      <img class="gridSong2" src="{{cancion.cover}}" />
+      <span class="absolute"> {{cancion.name}}</span>
+    </div>
+  </div>
+
+</div>
+

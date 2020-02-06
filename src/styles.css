@@ -8,9 +8,10 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
   }
-  body {
-    margin: 2em;
-  }
+body {
+  margin: 2em;
+  background-color: #39393e;
+}
   body, input[type="text"], button {
     color: #333;
     font-family: Cambria, Georgia;
@@ -62,3 +63,7 @@ h1 {
   * {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+.nopadding {
+padding:0;
+}

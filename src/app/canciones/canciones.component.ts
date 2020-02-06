@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cancion } from '../cancion';
 import { CANCIONES } from '../mock-canciones';
+import { FilterPipe } from '../filter.pipe';
 
 @Component({
   selector: 'app-canciones',
@@ -22,3 +23,5 @@ export class CancionesComponent implements OnInit {
   }
 
 }
+
+console.log(CANCIONES);

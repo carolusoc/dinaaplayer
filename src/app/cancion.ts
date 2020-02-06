@@ -3,6 +3,8 @@ export class Cancion {
     name: string;
     artista: string;
     album: string;
-    año: number;
+    year: number;
     genero: string;
+    track: string;
+    cover:string
   }
