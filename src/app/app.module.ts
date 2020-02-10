@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CancionesComponent } from './canciones/canciones.component';
 import { CancionDetalleComponent } from './cancion-detalle/cancion-detalle.component';
 import { FilterPipe } from './filter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FilterPipe } from './filter.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
