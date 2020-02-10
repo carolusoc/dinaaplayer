@@ -69,3 +69,8 @@ h1 {
 .absolute {
 padding:0 15px;
 }
+.left {
+  margin: 2rem;
+  background-color:white;
+  width: 50%;
+}

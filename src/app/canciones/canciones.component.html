@@ -1,15 +1,34 @@
 
 
-
   <div class="filtro col-sm-2">
 
     <h2>Buscar:</h2>
     
     <input [(ngModel)]="searchText" placeholder="Cancion, álbum, artista, genero...">
-  
+    
+    <mat-menu #appMenu="matMenu" xPosition="after"
+  yPosition="above">
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">Genero</button>
+    <button mat-menu-item>Favoritos</button>
+    <button mat-menu-item>Exitos</button>
+    <button mat-menu-item>Actualidad</button>
+    <button mat-menu-item>Top Ventas</button>
+    <button mat-menu-item>Top Descargas</button>
+ </mat-menu>
+ 
+ <button class="left col-sm-2" mat-flat-button [matMenuTriggerFor]="appMenu">Canciones</button>
+ 
+ <mat-menu #subMenu="matMenu">
+   <button mat-menu-item>Pop</button>
+   <button mat-menu-item>Rock</button>
+   <button mat-menu-item>Latino</button>
+   <button mat-menu-item>Española</button>
+   <button mat-menu-item>Clasica</button>
+ </mat-menu>
+
   </div>
 
- 
+   
 
 <div class="canciones col-sm-10">
   <div class="row">
