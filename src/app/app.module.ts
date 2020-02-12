@@ -9,6 +9,7 @@ import { CancionDetalleComponent } from './cancion-detalle/cancion-detalle.compo
 import { FilterPipe } from './filter.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatMenuModule} from '@angular/material/menu';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
